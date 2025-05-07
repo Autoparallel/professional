@@ -1,264 +1,122 @@
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\usepackage{graphicx}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
-\usepackage{soul}
-
-\RequirePackage{tikz}
-\RequirePackage{xcolor}
-\usepackage{tikz}
-\usetikzlibrary{svg.path}
-
-
-\definecolor{accentcolor}{HTML}{007000}
-\definecolor{cvblue}{HTML}{0E5484}
-\definecolor{black}{HTML}{130810}
-\definecolor{darkcolor}{HTML}{0F4539}
-\definecolor{cvgreen}{HTML}{3BD80D}
-\definecolor{taggreen}{HTML}{00E278}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\colorlet{name}{cvgreen}
-\colorlet{tagline}{darkcolor}
-\colorlet{heading}{darkcolor}
-\colorlet{headingrule}{cvblue}
-\colorlet{accent}{darkcolor}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-\definecolor{nice_blue}{RGB}{59,140,245}
-
-\newcommand\boldblue[1]{\textcolor{nice_blue}{\textbf{#1}}}
-\newcommand{\niceblue}[1]{\textcolor{nice_blue}{#1}}
-\newcommand{\cvgreen}[1]{\textcolor{cvgreen}{#1}}
-\newcommand{\accentcolor}[1]{\textcolor{accentcolor}{#1}}
-
-
-% Adjust margins
-\usepackage{geometry}
-\geometry{left=1.25cm, top=1.5cm, right=1.25cm, bottom=1.5cm, footskip=-.5cm}
-
-\urlstyle{same}
-
-\raggedbottom
-%\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{\vspace{-4pt}\raggedright\large\bfseries\color{black}}{}{0em}{}[{\color{black}\titlerule[1.5pt] \vspace{-5pt}}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\large#1} & \textbf{\small #2} \\
-      \textit{\large#3} & \textit{\small #4} \\
-
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-
-\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\input{structure}
 
 \begin{document}
 
-%----------HEADING----------
+%----------TWO COLUMN LAYOUT----------
+\noindent
+\leavevmode
+\begin{minipage}[t]{0.35\textwidth}
+    \vspace{0pt}
+        {\huge \scshape Colin P. Roberts} 
+        \newline 
+        \vspace{5pt}
+        \noindent Denver, CO  
+        \vspace{-5pt}
+        \begin{center}
+            \large \href{mailto:colin@autoparallel.xyz}{\accentcolor{\faEnvelope}} ~
+            \large \href{https://github.com/Autoparallel}{\accentcolor{\faGithub}} ~
+            \large \href{https://www.colinroberts.net}{\accentcolor{\faGlobe}} ~
+            \Large \href{https://x.com/Autoparallel}{\accentcolor{$\mathbb{X}$}} ~
+            \large \href{https://www.linkedin.com/in/colinproberts/}{\accentcolor{\faLinkedin}}
+        \end{center}
+        
+        \vspace{5pt}
+        \fcolorbox{accentcolor}{sectionbg}{%
+            \begin{minipage}{0.95\linewidth}
+                \begin{itemize}[leftmargin=0pt, label={}, itemsep=4pt]
+                    \item \small \textbf{\faSuperscript~Mathematics:} \newline  Mathematical Modeling, Data Analysis (incl. TDA), Computational Methods, PDEs, Dynamical Systems, Discrete Geometry, Pure Math, Algebra, Topology, Differential Geometry \vspace{2pt}    
+                    \item \small \textbf{\faCode~Software Engineering:} \newline  Architecture, Simulation, Parallel Computing, Async/Await, Concurrency, Rust, Python, Git, Linux \vspace{2pt}
+                    \item \small \textbf{\faLock~Cryptography \& Security:} \newline  Zero-Knowledge Proofs (ZKPs), MPC, TEEs, Proving Systems, Elliptic Curves, Lattices, Codes \vspace{2pt}
+                    \item \small \textbf{\faUsers~Leadership \& Communication:} \newline  Technical Leadership, Mentorship, Open Source Mgt., Cross-functional Collaboration, Technical Writing, Presentations \vspace{2pt}
+                \end{itemize}
+            \end{minipage}
+        }
+        \vspace{3pt}
 
+    \section*{OVERVIEW}
+    Mathematician and physicist turned research engineer with expertise in modeling, simulation, cryptography, and distributed systems. 
+    My focus is on architecting innovative solutions for complex challenges and leading teams to impactful execution. 
+    I want to be challenged and to make a difference.
+    
+    \section*{EDUCATION}
+    \vspace{-2pt} 
+    \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+      \multicolumn{2}{@{}l@{}}{\textbf{\large Colorado State University}} \\[2pt] 
+      \textit{\large Ph.D. Mathematics} & \textbf{\small 2022} \\
+      \multicolumn{2}{@{}l@{}}{\hspace{10pt}\small\textit{Focus: Geometric Inverse Problems}} \\[3pt] 
+      \textit{\large B.S. Mathematics \& Physics} & \textbf{\small 2017} \\
+      \multicolumn{2}{@{}l@{}}{\hspace{10pt}\small\textit{Honors Program}} \\
+    \end{tabular*}
+    \vspace{-7pt} 
+    \section*{HOBBIES}
+    \begin{itemize}[leftmargin=0in, label={}, itemsep=2pt]
+        \item \small \faBiking~Mountain biker
+        \item \small \faRunning~Runner
+        \item \small \faHeart~Health enthusiast
+        \item \small \faCode~OSS contributor and maintainer
+        \item \small \faServer~Self hosting
+        \item \small \faMicrochip~Electronics hobbyist
+        \item \small \faChalkboardTeacher~Technical writer
+    \end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.63\textwidth}
+    % Right column: Summary, What Sets Me Apart, Experience
+    \vspace{0pt}
+    \section*{WHAT SETS ME APART}
+    A leader that is not afraid to speak up even when it's unpopular.  
+    This courage has led to high-impact decisions for product and engineering ushering a team to pivot into a new direction. 
+    Since I'm a teacher at heart, I'm able to communicate complex ideas simply, effectively, and pedagogically.
+    \vspace{10pt}
 
-\begin{center}
-    {\Huge \scshape Colin P. Roberts} \\ \vspace{1pt}
-    Fort Collins, CO \\ \vspace{1pt}
-    %\small \href{tel:+1-626-589-4001}{ \raisebox{-0.1\height}\faPhone\ \underline{+1-626-589-4001} ~}
-    \href{mailto:robertsp@rams.colostate.edu}{\faEnvelope \ \accentcolor{robertsp@rams.colostate.edu}} ~
-    \href{https://www.linkedin.com/in/colinproberts/}{\faLinkedin \ \accentcolor{ColinPRoberts}}  ~
-    \href{https://github.com/ColinPR}{\faGithub \ \accentcolor{ColinPR}} ~
-    \href{https://www.colinroberts.net}{\faGreaterThan \ \accentcolor{colinroberts.net}}
-\end{center}
+    \section*{EXPERIENCE}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading[Pluto]
+        {\textbf{\large{Staff Research Engineer}} $|$ \large{Cryptography}}{2024 -- 2025}
+        \begin{itemize}[leftmargin=15pt, itemsep=0pt]
+            \resumeItem{\small{Led cryptography R\&D team of three to develop a memory-bound NIVC proving system \href{https://github.com/pluto/legacy-web-prover}{\accentcolor{Web Prover}} and \href{https://github.com/pluto/edge}{\accentcolor{Edge}} with Circom and Noir for fast proving on mobile devices and browsers}}
+            \resumeItem{\small{Designed and implemented folding-based \href{https://github.com/pluto/web-prover-circuits}{\accentcolor{Circom circuits}} to enable extracting data from HTTPS transcripts}}
+            \resumeItem{\small{Researched ZK, MPC, and TEEs for secure computation and which led to a team-wide decision to use TEEs for creating \href{https://pluto.xyz/blog/web-proof-techniques-tee-mode}{\accentcolor{Web Proofs}}}}
+            \resumeItem{\small{Managed \href{https://github.com/pluto/ronkathon}{\accentcolor{Ronkathon}}, an open-source cryptography repository with 15+ contributors, multiple bounty paying issues, and hackathon prizes}}
+        \end{itemize}
+        \vspace{7pt}
 
-\vspace*{-10pt}
-%------Professional Summary-------
-\section{PROFESSIONAL SUMMARY}
+        \resumeProjectHeading[Primitive]
+        {\textbf{\large{Staff Research Engineer}} $|$ \large{DeFi \& Simulations}}{2022 -- 2024}
+            \begin{itemize}[leftmargin=15pt, itemsep=2pt]
+            \resumeItem{\small{Lead developer of \href{https://github.com/anthias-labs/arbiter}{\accentcolor{Arbiter}}; Open source Rust-based multi-agent simulation framework with 700+ stars, 30+ contributors}}
+            \resumeItem{\small{Led simulations using \href{https://github.com/anthias-labs/arbiter}{\accentcolor{Arbiter}} to study Primitive's various DeFi protocols; found vulnerabilities that other auditors missed}}
+            \resumeItem{\small{Researched, designed, and built novel AMMs for DeFi on Ethereum such as \href{https://github.com/primitivefinance/DFMM}{\accentcolor{DFMM}} and \href{https://github.com/primitivefinance/rmm}{\accentcolor{RMM}}}, both of which allow for dynamic liquidity allocation}
+            \resumeItem{\small{Contributed to \href{https://github.com/primitivefinance/solstat}{\accentcolor{solstat}} for onchain statistical function approximation}}
+            \resumeItem{\small{Contributed to multiple open-source blockchain projects (e.g., \href{https://github.com/bluealloy/revm}{\accentcolor{revm}}, \href{https://github.com/paradigmxyz/ethers-rs}{\accentcolor{ethers-rs}})}}
+        \end{itemize}
+        \vspace{7pt}
 
-    Mathematical physicist with a diverse background interested in developing novel computational methods for models that incorporate real world data. I am eager to explore new content and improve my technical skills and collaborative abilities in order to solve challenging problems. 
- \vspace{-5pt}
-%-----------PROGRAMMING SKILLS-----------
-\section{RELEVANT SKILLS}
- \begin{itemize}[leftmargin=0in, label={}]
-    \small{\item{
+        \resumeProjectHeading[NASA Glenn Research Center]
+        {\textbf{\large{NASA Intern}} $|$ \large{Plasmas \& TDA}}{2021}
+        \begin{itemize}[leftmargin=15pt, itemsep=2pt]
+            \resumeItem{\small{Developed geometric framework for Maxwell-Vlasov equation for deeper theoretical understanding of plasma physics}}
+            \resumeItem{\small{Researched cellular sheaves and their applications to space networks to improve network design and resilience}}
+        \end{itemize}
+        \vspace{7pt}
 
-     \textbf{\normalsize{Applied math:}}{ \normalsize{Data assimilation, dimension reduction, principal component analysis, differential equations, tensor algebra, geometric algebra, discrete differential geometry, Gaussian mixture models, multiscale modeling}} \\
-     \textbf{\normalsize{Communication:}}{ \normalsize{Teaching, delegation, research presentations, technical writing, remote collaboration}} \\
-     \textbf{\normalsize{Programming and software:}}{ \normalsize{Python, Matlab, Java, Git, \LaTeX, Linux, SQL}} \\
-     \textbf{\normalsize{Packages:}}{ \normalsize{Parallel computing toolbox, Numpy, Pandas, Matplotlib, TensorFlow}} \\	
-	}}
- \end{itemize}
- \vspace{-25pt}
+        \resumeProjectHeading[AIM \& MCRN]
+        {\textbf{\large{Research}} $|$ \large{Data Assimilation \& Modeling}}{2019 - 2022}
+        \begin{itemize}[leftmargin=15pt, itemsep=2pt]
+            \resumeItem{\small{Collaborated to develop novel data assimilation software for high-dimensional nonlinear systems and presented at numerous conferences \href{https://www.sciencedirect.com/science/article/abs/pii/S0898122121002121}{\accentcolor{[Paper]}}}}
+            \resumeItem{\small{Developed multiscale epidemic model incorporating real-world data which was used by \href{https://www.jbsfoodsgroup.com/}{\accentcolor{JBS Foods}} in Greeley, CO for workplace safety planning}}
+        \end{itemize}
+        \vspace{7pt}
 
-%-----------PROJECTS-----------
-\section{RELEVANT EXPERIENCE}
-   
-\resumeSubHeadingListStart
-          \resumeProjectHeading
-          {\href{}{\textbf{\large{Graduate Student}}} $|$ \large{Collaboration, Research, and Teaching}}{08/2017 -- Present}
-        %\vspace*{-1cm}
-        \resumeProjectHeading{Colorado State University, Fort Collins, CO}{~}
-          \resumeItemListStart
-            \resumeItem{\normalsize{\textbf{Thesis:} Using Clifford Analysis to Study Inverse Tomography}}
-            \resumeItem{Solo author of \normalsize{\emph{A Gelfand Transform for Spinor Fields on Embedded Riemannian Manifolds.} \href{https://arxiv.org/abs/2203.00118}{\accentcolor{[Preprint]}}}}
-	\resumeItemListEnd
-
-\resumeProjectHeading{\bf{Ongoing collaboration in Data Assimilation}}{~}
-\resumeItemListStart
-\resumeItem{\normalsize{Developing proprietary modular code base for projected particle filter algorithm. \href{https://github.com/ColinPR/projected_particle_filter.git}{\accentcolor{[Github]}}}}
-\resumeItem{\normalsize{Optimizing algorithm performance through on-line dimension reduction while adding capability to probe for non-Gaussian behavior using time-varying Gaussian mixture models.}}
-	\resumeItemListEnd
-%\vspace*{-5pt}
-
-%\vspace*{-5pt}
-\resumeProjectHeading{\bf{Ongoing collaboration with NASA}}{~}
-\resumeItemListStart
-			\resumeItem{\normalsize{Collaborating with experts in electromagnetics and plasmas to continue work on the Maxwell--Vlasov equation.}}
-	\resumeItemListEnd
-\vspace*{-10pt}
-
-\resumeProjectHeading{\bf{Teaching Background}}{~}
-\resumeItemListStart
-            \resumeItem{\normalsize{Taught 7 different courses over 10 semesters and developed the content of 4 courses.} \href{https://www.colinroberts.net/teaching.html}{\accentcolor{[Materials]}}}
-            \resumeItem{\normalsize{Developed an open-source textbook and Matlab tools for an applied mathematics for chemists course. \href{https://github.com/ColinPR/mathematics_for_physicists_and_chemists.git}{\accentcolor{[Github]}}}}
-          \resumeItemListEnd
-\vspace*{-10pt}
-       \resumeProjectHeading
-          {\href{https://intern.nasa.gov/}{\textbf{\large{NASA: Internship Program} \small{\raisebox{-0.1\height}\faExternalLinkSquareAlt}}} $|$ \href{https://www.mathjobs.org/jobs/list/17245?rss}{\large{Topological Plasmas}}}{06/2021 -- 08/2021}
-        %\vspace*{-1cm}
-        \resumeProjectHeading{NASA Glenn Research Center, Cleveland, OH (Remote)}{~}
-          \resumeItemListStart
-            \resumeItem{\normalsize{Worked with collaborators to develop a geometric framework for the Maxwell-Vlasov equation for plasmas.}}
-          \resumeItemListEnd
-        % \vspace{-5pt}
-      \resumeProjectHeading{\href{https://aimath.org/workshops/upcoming/mcrn2020/}{\textbf{\large{AIM: Summer Program on COVID-19 Modeling} \small{\raisebox{-0.1\height}\faExternalLinkSquareAlt}}} $|$ \href{https://mathcommunities.org/taking-aim-at-covid-19/}{\large{Multiscale Modeling}}}{06/2020 -- 07/2020}
-        %\vspace*{-1cm}
-        \resumeProjectHeading{American Institute of Mathematics, San Jose, CA (Remote)}{~}
-          \resumeItemListStart
-            \resumeItem{\normalsize{Developed a multiscale epidemic model that incorporated real world data to predict the spread of COVID-19 in communities with schools.}} 
-			\resumeItem{\normalsize{Presented our group's work and interviewed with American Institute of Mathematics. \href{https://mathcommunities.org/taking-aim-at-covid-19/}{\accentcolor{[Link]}}}}
-			\resumeItem{\normalsize{Provided our codebase and insight to JBS Foods in Greeley, CO.} \href{https://github.com/clairevalva/mcrn_multi_DA}{\accentcolor{[Github]}}}
-          \resumeItemListEnd
-         %\vspace{-5pt}
-
-          \resumeProjectHeading
-          {\href{https://aimath.org/workshops/upcoming/mcrn2019/}{\textbf{\large{AIM: Engagement Program with MCRN}} \href{https://www.sciencedirect.com/science/article/abs/pii/S0898122121002121}{\raisebox{-0.1\height}\faExternalLinkSquareAlt }} $|$ \large{Data Assimilation}}{07/2019 -- Present}
-       % \vspace*{-1cm}
-        \resumeProjectHeading{Raleigh, NC \& Remote}{~}
-          \resumeItemListStart
-            \resumeItem{\normalsize{Worked collaboratively to develop novel data assimilation software for high-dimensional nonlinear systems and presented this work at numerous conferences. \href{https://www.sciencedirect.com/science/article/abs/pii/S0898122121002121}{\accentcolor{[Publication]}}}}
-          \resumeItemListEnd
-
+        \resumeProjectHeading[Colorado State University]
+        {\textbf{\large{Graduate Student}} $|$ \large{Research \& Teaching}}{2017 -- 2022}
+        \begin{itemize}[leftmargin=15pt, itemsep=2pt]
+            \resumeItem{\small{Attained new results on geometric inverse problems using Clifford analysis and Hodge theory \href{https://arxiv.org/abs/2203.00118}{\accentcolor{[Paper]}}}} \href{https://mountainscholar.org/items/a9071681-3f20-4807-b69f-e08fe082637d}{\accentcolor{[Thesis]}}
+            \resumeItem{\small{Taught seven different courses (including three courses that were self-coordinated) and developed open-source educational materials including a textbook: \href{https://github.com/Autoparallel/mathematics_for_physicists_and_chemists}{\accentcolor{Applied Mathematics for Physicists and Chemists}}}}
+        \end{itemize}
 
     \resumeSubHeadingListEnd
-\vspace{-12pt}
-
-%
-
-%-----------EDUCATION-----------
-\section{EDUCATION}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Colorado State University, \textnormal{Fort Collins, CO, USA}}{08/2012 -- Present}
-      {Doctor of Philosophy, Mathematics}{Expected June 2022}
-    \vspace*{-.7cm}
-    \resumeSubheading{~}{~}{Bachelor of Science, Honors Student in Mathematics \& Physics}{May 2017}
-  \resumeSubHeadingListEnd
-
-\section{HOBBIES}
-
-	I am an avid hiker, trail runner, and mountain biker. I also aspire to be a better chef, baker, and equity trader.
-
-
-%%-----------INVOLVEMENT---------------
-%\section{EXTRACURRICULAR}
-%    \resumeSubHeadingListStart
-%        \resumeSubheading{Organization Name \href{Certificate Proof link}{\raisebox{-0.1\height}\faExternalLink } }{MM YYYY -- MM YYYY}{\underline{Role}}{Location}
-%            \resumeItemListStart
-%                \resumeItem{\normalsize{About the role \textbf{and responsibilities carried out.}}}
-%                \resumeItem{\normalsize{Participation Certificate. \href{ParticipationCertificateLink.com}{\raisebox{-0.1\height}\faExternalLink }}}
-%            \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-% \vspace{-11pt}
-%
-% %-----------CERTIFICATIONS---------------
-%\section{CERTIFICATIONS}
-%
-%$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{ReactJS \& Redux - Udemy}} \hspace{1.6cm}
-%$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{Java}} \hspace{2.59cm}
-%$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com} {Command Line in Linux - Coursera}}\\
-%
-%$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{Python for Data Science - XIE}} \hspace{1cm}
-%$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{SQL}} \hspace{2.6cm}
-%$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{Microsoft AI Classroom - Microsoft}} \\
-%
-%$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{\textbf{5 Stars} in \textbf{C++} \& \textbf{SQL} \href{certificateLink.com}{\raisebox{-0.1\height}\faExternalLink }}}\hspace{1.45cm}
-%$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{MongoDB Basics}} \hspace{0.5cm}
-%$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{NodeJS with Express \& MongoDB - Udemy}} \\
-
+\end{minipage}
 
 \end{document}
             
